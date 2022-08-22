@@ -1,5 +1,7 @@
 #!/usr/bin/python
-def magic_calculation(a, b)
+def magic_calculation(a, b):
+    return(98 + (a**b))
 
+import dis
 
-return (98(a, b))
+dis.dis(magic_calculation)
