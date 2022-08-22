@@ -1,5 +1,4 @@
 #!/bin/bash
-import py_compile
-python3 -m py_compile.compile("$PYFILE")
-mv __pycache__/*pyc my_main.pyc
+python3 -m py_compile $PYFILE
+mv __pycache__/*.pyc my_main.pyc
 chmod +x my_main.pyc
