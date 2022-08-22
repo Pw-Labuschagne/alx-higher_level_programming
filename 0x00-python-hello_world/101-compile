@@ -1,0 +1,3 @@
+#!/bin/bash
+python -m py_compile $PYFILE -o my_main.pyc
+chmod +x my_main.pyc
