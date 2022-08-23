@@ -12,4 +12,5 @@ if remainder == 0:
 elif remainder > 5:
     print(f"Last digit of {number} is {remainder} and is greater than 5")
 elif remainder < 6 and remainder != 0:
-    print(f"Last digit of {number} is {remainder} and is less than 6 and not 0")
+    print(f"Last digit of {number} is {remainder}")
+    print(f(" and is less than 6 and not 0")
