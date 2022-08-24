@@ -2,8 +2,9 @@
 def uppercase(str):
     cond = ""
     for i in range(0, len(str)):
-        if ord(str[i]) >= 97 and ord(str[i]) <= 122:
-            print("{}".format(str[i] + 32), end=cond)
+        ascii_val = ord(str[i])
+        if ascii_val >= 97 and ascii_val <= 122:
+            print("{}".format(chr(ascii_val - 32)), end=cond)
         else:
             if str[i] == '\0':
                 cond = '\n'
