@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-cond = ','
+cond = ', '
 for i in range(0, 100):
     if i < 10:
         print("{}{}".format(0, i), end=cond)
