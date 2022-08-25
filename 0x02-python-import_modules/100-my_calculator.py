@@ -4,9 +4,9 @@ if __name__ == "__main__":
     import sys
 
     num_arg = len(sys.argv) - 1
-    operator = sys.argv[3]
+    operator = sys.argv[2]
     a = int(sys.argv[1])
-    b = int(sys.argv[4])
+    b = int(sys.argv[3])
     if num_arg != 3:
         print("Usage: ./100-my_calculator.py <a> operator <b>")
         exit(1)
