@@ -9,7 +9,7 @@ if __name__ == "__main__":
     elif num_element > 0:
         if num_element == 1:
             a = ''
-        print("{:d} argument{}".format(num_element, a))
+        print("{:d} argument{}:".format(num_element, a))
         for e in sys.argv:
             if arg_count > 0:
                 print("{:d}: {}".format(arg_count, e))
