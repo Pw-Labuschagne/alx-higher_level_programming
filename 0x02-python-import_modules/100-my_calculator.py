@@ -11,7 +11,7 @@ if __name__ == "__main__":
     if num_arg != 3:
         print("Usage: ./100-my_calculator.py <a> operator <b>")
         sys.exit(1)
-    elif operator == '+':
+    if operator == '+':
         num = add(a, b)
     elif operator == '-':
         num = sub(a, b)
