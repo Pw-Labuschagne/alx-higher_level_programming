@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    new = []
-    for i in matrix:
-        new = new.append(sqr(lambda i: i ** 2))
-    return new
+    def power_2(num):
+        pwr = num ** 2
+        return pwr
+    return power_2
+
+
+for i in range(matrix):
+    power_func = square_matrix_simple(i)
+
+print(power_func)
