@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
 
-def search_replace(my_lsit, search, replace):
+def search_replace(my_list, search, replace):
 
-    alist = mylist[:]
+    alist = my_list[:]
 
     for x, y in enumerate(alist):
-        if alist[i] == search:
-            alist[i] = replace
+        if alist[x] == search:
+            alist[x] = replace
 
     return alist
