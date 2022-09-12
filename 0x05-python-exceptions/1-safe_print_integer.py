@@ -8,5 +8,5 @@ def safe_print_integer(value):
             return(True)
         else:
             raise
-    except:
+    except Exception:
         return(False)
