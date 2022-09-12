@@ -8,7 +8,6 @@ def safe_print_division(a, b):
         sumAll = a / b
     except:
         sumAll(int(None))
-    else:
-        print("Inside result: {}".format(sumAll))
     finally:
+        print(f"Inside result: {sumAll}")
         return(sumAll)
