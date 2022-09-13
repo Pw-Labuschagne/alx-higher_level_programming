@@ -3,12 +3,18 @@
 
 
 class Square:
-    """The Square size will now take int type"""
-
+    """The Square size will be initialize"""
     def __init__(self, size=0):
-        if (type(size) is not int:
-            raise TypeError("size must be an inetger")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-
-    size.__self = size
+        """initializes the square
+        Args:
+            size (int): size of the square
+        Returns:
+            None
+        """
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        else:
+            if size < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = size
