@@ -6,12 +6,8 @@ class Square:
     """The Square size will now take int type"""
 
     def __init__(self, size=0):
-        try:
-            self.__size = size
-            return size
-        except ValueError:
-            print("size must be >= 0")
-            return
-        except TypeError:
-            print("size must be an integer")
-            return
+        if type(size) is not int:
+            raise ValueError("size must be >= 0")
+        elif size < 0:
+            raise TypeError("size must be an integer")
+    size.__self = size
