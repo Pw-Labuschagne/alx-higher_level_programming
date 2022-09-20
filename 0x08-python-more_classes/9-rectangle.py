@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""Creating a rectangle"""
 
 
 class Rectangle:
-    """empty class that defines a rectangle"""
+    """
+    empty class that defines a rectangle
+    """
+
     number_of_instances = 0
     print_symbol = '#'
 
