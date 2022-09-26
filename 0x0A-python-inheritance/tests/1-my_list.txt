@@ -1,0 +1,60 @@
+The ``1-my_list`` module
+========================
+
+Using ``1-my_list``
+=======================
+
+        >>>MyList = __import__('1-my_list').MyList
+
+and it in usage:
+
+        >>> my_list = MyList()
+        >>> my_list.append(1)
+        >>> my_list.append(4)
+        >>> my_list.append(2)
+        >>> my_list.append(3)
+        >>> my_list.append(5)
+        >>> print(my_list)
+        [1, 4, 2, 3, 5]
+        >>> my_list.print_sorted()
+        [1, 2, 3, 4, 5]
+        >>> print(my_list)
+        [1, 4, 2, 3, 5]
+        >>>
+
+=======================================
+
+Next valid case(undefined object):
+
+        >>> MyList = __import__('1-my_list').MyList
+        >>> my_list10.print_sorted()
+        Traceback (most recent call last):
+         file "<stdin>", line 1, in <module>
+        NameError: name 'my_list10' is not defined
+        >>>
+
+======================================
+
+Next valid case(single unique number):
+
+        >>> my_list = MyList()
+        >>> my_list.append(8)
+        >>> my_list.print_sorted()
+        [8]
+        >>> print(my_list)
+        [8]
+        >>>
+
+====================================
+
+Next valid case(empty list):
+
+        >>> emty_list = []
+        >>> my_list = MyList(empty_list)
+        >>> my_list.print_sorted()
+        []
+        >>> print(my_list)
+        []
+                                                                                                                                                      57,1-8        Bot
+
+
