@@ -2,9 +2,10 @@ The ``1-my_list`` module
 ========================
 
 Using ``1-my_list``
-=======================
+----------------------------------------------------
 
-        >>>MyList = __import__('1-my_list').MyList
+        >>> MyList = __import__('1-my_list').MyList
+	>>> 
 
 and it in usage:
 
@@ -22,7 +23,7 @@ and it in usage:
         [1, 4, 2, 3, 5]
         >>>
 
-=======================================
+---------------------------------------------------
 
 Next valid case(undefined object):
 
@@ -33,7 +34,7 @@ Next valid case(undefined object):
         NameError: name 'my_list10' is not defined
         >>>
 
-======================================
+----------------------------------------------------
 
 Next valid case(single unique number):
 
@@ -45,7 +46,7 @@ Next valid case(single unique number):
         [8]
         >>>
 
-====================================
+----------------------------------------------------
 
 Next valid case(empty list):
 
@@ -55,6 +56,18 @@ Next valid case(empty list):
         []
         >>> print(my_list)
         []
-                                                                                                                                                      57,1-8        Bot
 
+----------------------------------------------------
+
+Next valid case(neg numbers):
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(-2)
+	>>> my_list.append(4)
+	>>> my_list.append(-7)
+	>>> my_list.print_sorted()
+	[1, -2, 4, -7]
+	>>>
 
