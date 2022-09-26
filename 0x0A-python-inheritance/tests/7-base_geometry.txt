@@ -1,0 +1,42 @@
+The ``7-base_geometry`` module
+=========================================
+
+Usage of ``BaseGeometry``
+----------------------------------------
+
+Importing:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>>
+
+Print the area of:
+
+	>>> bg = BaseGeometry()
+	>>> bg.area()
+	Traceback (most recent call last):
+		   ...
+	Exception: area() is not implemented
+
+Non-integer value being passed as argument:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("name", "John")
+	Traceback (most recent call last):
+		   ...
+	TypeError: name must be an integer
+
+Passing a neg value:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("distance", -4)
+	Traceback (most recent call last):
+                   ...
+	ValueError: distance must be greater than 0
+
+Passing a value = 0:
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", 0)
+        Traceback (most recent call last):
+                   ...
+        ValueError: age must be greater than 0
+
