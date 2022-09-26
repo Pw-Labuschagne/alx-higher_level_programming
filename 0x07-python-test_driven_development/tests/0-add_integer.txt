@@ -1,0 +1,77 @@
+# 0-add_integer.txt
+
+=========================
+Using The 0-add_integer.py
+==========================
+
+In the module we have defined an integer addition function ``add_integer(a, b=89)``.
+
+
+Usage
+=====
+
+``add_integer(...)``` returns the addition of two arguments if it is of the type float or int.
+If we encounter a float it should be casted to int.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1, 2)
+	3
+
+The function adds integers of "+" and "-" bias.
+
+::
+
+	>>> add_integer(100, -2)
+	98
+
+As the default value of b = 98 adding 1 argument to a equals to this result.
+
+::
+
+	>>> add_integer(2)
+	100
+
+It also works withg floats, but notice the float gets casted to integer.
+
+::
+
+	>> add_integer(100.3, -2)
+	98
+
+Once again b is already prepopulated  as 98.
+
+::
+
+	>>> add_integer(1)
+	99
+
+::
+
+	>>> add_integer(-1, 20)
+	19
+
+Usage for non int or float type (strings)
+========================================
+
+``add_integer()`` expects both arguments to be of either float or int type.
+If the argument receives a value of non-integer type a TypeError is raised with exception message:
+
+::
+
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+::
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(None, 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
