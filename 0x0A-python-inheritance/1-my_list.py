@@ -5,6 +5,5 @@
 class MyList(list):
 
     def print_sorted(self)
-    """Prints list in ascending order"""
-
-    print(sorted(self))
+        """Prints list in ascending order"""
+        print(sorted(self))
