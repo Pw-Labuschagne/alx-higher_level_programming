@@ -1,7 +1,7 @@
-The ``1-my_list`` module
-========================
+Test for 1-my_list.py
+===================================================
 
-Using ``1-my_list``
+Using 1-my_list
 ----------------------------------------------------
 
         >>> MyList = __import__('1-my_list').MyList
@@ -50,12 +50,13 @@ Next valid case(single unique number):
 
 Next valid case(empty list):
 
-        >>> emty_list = []
+        >>> empty_list = []
         >>> my_list = MyList(empty_list)
         >>> my_list.print_sorted()
         []
         >>> print(my_list)
         []
+	>>>
 
 ----------------------------------------------------
 
@@ -68,6 +69,6 @@ Next valid case(neg numbers):
 	>>> my_list.append(4)
 	>>> my_list.append(-7)
 	>>> my_list.print_sorted()
-	[1, -2, 4, -7]
+	[-7, -2, 1, 4]
 	>>>
 
