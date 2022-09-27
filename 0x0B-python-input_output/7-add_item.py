@@ -13,7 +13,7 @@ try:
         all_args.append(argv[i])
     save_to_json_file(all_args, "add_item.json")
 
-except:
+except FileNotFoundError:
     all_args = []
 
     for i in range(1, len(argv)):
