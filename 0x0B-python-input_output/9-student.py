@@ -2,7 +2,7 @@
 """Write a class Student that defines a student by"""
 
 
-class student:
+class Student:
     """A student? Is this me?"""
 
     def __init__(self, first_name, last_name, age):
