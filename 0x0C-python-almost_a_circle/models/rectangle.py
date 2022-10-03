@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle with private attributes and own public getter 
+    """Rectangle with private attributes and own public getter
     and setter
     Args:
         __Width (int) = Width of rectangle
@@ -24,7 +24,7 @@ class Rectangle(Base):
     def width(self):
         """Returns the witdh value as private"""
         return self.__width
-        
+
     @width.setter
     def width(self, width):
         """Sets the width value as private
@@ -114,7 +114,7 @@ class Rectangle(Base):
             if self.__x > 0:
                 for b in range(self.__x):
                     print(' ', end="")
-                
+
             for c in range(self.__width):
                 if i == self.__height - 1 and c == self.__width - 1:
                     print("#")
@@ -122,8 +122,9 @@ class Rectangle(Base):
                 if c == self.__width - 1:
                     print("#")
                     continue
-                    
+
                 print("#", end="")
+
     def __str__(self):
         """Update the class Rectangle by overriding the __str__ method
         so that it returns [Rectangle] (<id>) <x>/<y> -
@@ -186,8 +187,6 @@ class Rectangle(Base):
 
             if 'id' in value_kwargs:
                 super().__init__(value_kwargs['id'])
-
-
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangle

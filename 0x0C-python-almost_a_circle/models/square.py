@@ -13,7 +13,7 @@ class Square(Rectangle):
 
     All attributes to use super() call class
     """
-    
+
     def __init__(self, size, x=0, y=0, id=None):
         """Inherited from rectangle"""
         super().__init__(size, size, x, y, id)
@@ -36,6 +36,7 @@ class Square(Rectangle):
                                              self.id,
                                              self.x, self.y,
                                              self.size)
+
     def update(self, *args, **kwargs):
         """Updates the square class through arguments:
         Args:
@@ -80,6 +81,7 @@ class Square(Rectangle):
 
             if 'id' in value_kwargs:
                 self.id = (value_kwargs['id'])
+
     def to_dictionary(self):
         """Returns the dictionary representation of a Square
         must contain:

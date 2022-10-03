@@ -2,6 +2,7 @@
 """Base class"""
 from json import dumps, dump, loads
 
+
 class Base:
     """The goal of it is to manage id attribute in all our future
     classes
@@ -24,15 +25,13 @@ class Base:
         list_dictionaries:"""
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        
-        return dumps(list_dictionaries)
 
+        return dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """Writes the JSON string representation
         of list_objs to a file"""
-
 
     @staticmethod
     def from_json_string(json_string):
