@@ -22,7 +22,8 @@ def Matched():
 
     show = cur.fetchall()
 
-    print(show)
+    for row in show:
+        print(show)
 
     cur.close()
     db.close()
