@@ -3,10 +3,8 @@
 
 import sys
 import MySQLdb
-import re
 
-
-if __name__ == "__main__":
+def ListStatesN():
 
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
@@ -22,3 +20,6 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
+
+if __name__ == "__main__":
+    ListStatesN()
