@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """A script that lists states starting with Cap N in database hbtn_0e_0_usa"""
 
-import sys
 import MySQLdb
+import sys
+
 
 def ListStatesN():
 
