@@ -18,8 +18,8 @@ def Matched():
 
     cur = db.cursor()
 
-    cur.execute(("SELECT * FROM states WHERE name = '{:s}' ORDER
-                BY id").format(searched))
+    cur.execute("SELECT * FROM states WHERE name = '{:s}' ORDER
+                BY id".format(searched))
 
     show = cur.fetchall()
 
