@@ -18,8 +18,8 @@ def Matched():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE BINARY name = \'{}\'\ ORDER
-                BY id").format(searched)
+    cur.execute(("SELECT * FROM states WHERE BINARY name = \'{}\'\ ORDER
+                BY id").format(searched))
 
     show = cur.fetchall()
 
