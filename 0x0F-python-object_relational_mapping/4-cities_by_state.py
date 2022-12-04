@@ -19,8 +19,8 @@ def DisplayCities():
 
     cur = db.cursor()
 
-    cur.execute('SELECT c.id, c.name, s.name FROM cities c LEFT ' +
-                'JOIN states s ON c.state_id = s.id ORDER BY c.id ASC;') 
+    cur.execute('SELECT cities.id, cities.name, states.name FROM cities \
+            ORDER BY id ASC')
 
     show = cur.fetchall()
 
