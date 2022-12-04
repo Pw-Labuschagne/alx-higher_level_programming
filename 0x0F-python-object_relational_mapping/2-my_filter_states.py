@@ -7,9 +7,9 @@ import sys
 def Matched():
     """Prints if it matches"""
 
-    username = sys.arg[1]
-    password = sys.arg[2]
-    D_B = sys.arg[3]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    D_B = sys.argv[3]
     searched = sys.argv[4]
     H_N = "localhost"
     p_Id = 3306
@@ -18,8 +18,8 @@ def Matched():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER
-                BY id".format(searched))
+    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER" +
+                "BY id".format(searched))
 
     show = cur.fetchall()
 
