@@ -6,11 +6,17 @@ import MySQLdb
 
 def ListStatesN():
 
-    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    H_N = "localhost"
+    p_Id = 3306
+    username = sys.argv[1]
+    password = sys.argv[2]
+    D_B = sys.argv[3]
+
+    db = MySQLdb.connect(host=H_N, port=p_Id, user=username, passwd=password, db=D_B)
 
     cur = db.cursor()
 
-    States = cur.execute('SELECT * FROM states WHERE name
+    cur.execute('SELECT * FROM states WHERE name
                                 regexp "^N.*" ORDER BY ID')
 
     Results = cur.fetchall()
