@@ -8,25 +8,20 @@ import MySQLdb
 
 def ListStates():
     """Lists all the states in db hbtn_0e_0_usa"""
-
-    username = sys.arg[1]
-    password = sys.arg[2]
-    dbName = sys.arg[3]
-    host_name = 'localhost'
-    port_id = 3306
     
-    db = MySQLdb.connect(host=host_name, user=username, passwd=password,
-                         db=dbName, port=port_id)
+    db = MySQLdb.connect(host="localhost", user=sys.arg[1], passwd=sys.arg[2],
+                         db=sys.arg[3], port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY ID ASC;")
+    cur.execute("SELECT * FROM states ORDER BY ID")
     Results = cur.fetchall()
-    cur.close()
-    db.close()
 
     if Results:
         for row in Results:
             print(row)
+
+    cur.close()
+    db.close()
 
     if __name__ == "__main__":
         ListStates()
