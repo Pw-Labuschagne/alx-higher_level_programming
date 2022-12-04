@@ -4,6 +4,7 @@
 import MySQLdb
 import sys
 
+
 def Matched():
     """Prints if it matches"""
 
@@ -14,7 +15,8 @@ def Matched():
     H_N = "localhost"
     p_Id = 3306
 
-    db = MySQLdb.connect(host=H_N, user=username, passwd=password, db=D_B, port=p_Id)
+    db = MySQLdb.connect(host=H_N, user=username, passwd=password,
+                         db=D_B, port=p_Id)
 
     cur = db.cursor()
 
@@ -28,6 +30,7 @@ def Matched():
 
     for row in show:
         print(row)
+
 
 if __name__ == "__main__":
     Matched()
