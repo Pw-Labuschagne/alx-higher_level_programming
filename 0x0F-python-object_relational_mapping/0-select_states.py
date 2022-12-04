@@ -5,15 +5,15 @@ import MySQLdb
 import sys
 
 
-def list_all():
-    '''list all states in db'''
+def ListStates():
+    """list all states in db"""
     username = sys.argv[1]
     password = sys.argv[2]
-    db_name = sys.argv[3]
-    host = 'localhost'
+    D_B = sys.argv[3]
+    H_N = 'localhost'
     port = 3306
-    db = MySQLdb.connect(host=host, user=username, passwd=password,
-                         db=db_name, port=port)
+    db = MySQLdb.connect(host=H_N, user=username, passwd=password,
+                         db=D_B, port=port)
     cur = db.cursor()
     cur.execute('SELECT * FROM states ORDER BY id ASC;')
     result = cur.fetchall()
@@ -25,4 +25,4 @@ def list_all():
 
 
 if __name__ == '__main__':
-    list_all()
+    ListStates()
