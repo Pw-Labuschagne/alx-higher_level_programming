@@ -6,22 +6,19 @@ import MySQLdb
 import re
 
 
-def ListStateN():
-    """Lists states with Cap N"""
+if __name__ == "__main__":
 
-    db = MySQLdb.connect(host="localhost", user=sys.arg[1], passwd=sys.arg[2], db=sys.arg[3], port=3306)
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.arg[1], passwd=sys.arg[2], db=sys.arg[3])
 
     cur = db.cursor()
-    States = curr.execute('SELECT * FROM states WHERE name
+
+    States = cur.execute('SELECT * FROM states WHERE name
                                 regexp "^N.*" ORDER BY ID')
 
-    Results = curr.fetchall()
+    Results = cur.fetchall()
 
     for row in Results:
         print(row)
 
     cur.close()
     db.close()
-
-if __name__ == "__main__":
-    ListStateN
