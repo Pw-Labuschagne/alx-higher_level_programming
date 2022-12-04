@@ -12,7 +12,7 @@ def ListStates():
     username = sys.arg[1]
     password = sys.arg[2]
     dbName = sys.arg[3]
-    hostName = localhost
+    hostName = "localhost"
     portId = 3306
 
     db = MySQLdb.connect(host=hostName, user=username, passwd=password,
