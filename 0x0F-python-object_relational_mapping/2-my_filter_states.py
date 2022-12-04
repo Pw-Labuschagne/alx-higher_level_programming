@@ -23,12 +23,11 @@ def Matched():
 
     show = cur.fetchall()
 
-    for row in show:
-        print(show)
-
     cur.close()
     db.close()
 
+    for row in show:
+        print(row)
 
 if __name__ == "__main__":
     Matched()
