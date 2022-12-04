@@ -1,32 +1,31 @@
 #!/usr/bin/python3
-"""A script that lists states starting with Cap N in database hbtn_0e_0_usa"""
+'''script for task 1'''
 
 import MySQLdb
 import sys
 
 
-def ListStatesN():
-
-    H_N = "localhost"
-    p_Id = 3306
+def list_N():
+    '''lists all states with a name that starts with N'''
     username = sys.argv[1]
     password = sys.argv[2]
-    D_B = sys.argv[3]
+    db_name = sys.argv[3]
+    host = 'localhost'
+    port = 3306
 
-    db = MySQLdb.connect(host=H_N, port=p_Id, user=username, passwd=password, db=D_B)
-
+    db = MySQLdb.connect(host=host, user=username, passwd=password,
+                         db=db_name, port=port)
     cur = db.cursor()
-
-    cur.execute('SELECT * FROM states WHERE name
-                                regexp "^N.*" ORDER BY ID')
-
-    Results = cur.fetchall()
-
-    for row in Results:
-        print(row)
-
+    cur.execute('SELECT * FROM states WHERE name regexp "^N.*" ' +
+                'ORDER BY states.id ASC')
+    result = cur.fetchall()
     cur.close()
     db.close()
+    if result:
+        for row in result:
+            if row[1][0] == "N":
+                print(row)
+
 
 if __name__ == "__main__":
-    ListStatesN()
+    list_N()
