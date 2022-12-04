@@ -5,6 +5,7 @@
 import sys
 import MySQLdb
 
+
 def ListStates():
     """Lists all the states in db hbtn_0e_0_usa"""
 
@@ -14,7 +15,8 @@ def ListStates():
     hostName = localhost
     portId = 3306
 
-    db = MySQLdb.connect(host=hostName, user=username, passwd=password, db=dbName, port=portId)
+    db = MySQLdb.connect(host=hostName, user=username, passwd=password,
+                         db=dbName, port=portId)
 
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY ID ASC;")
@@ -26,5 +28,5 @@ def ListStates():
         for row in Results:
             print(row)
 
-    if __name__ == "__main__" :
+    if __name__ == "__main__":
         ListStates()
