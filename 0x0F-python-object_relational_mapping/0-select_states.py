@@ -12,8 +12,9 @@ def ListStates():
     username = sys.arg[1]
     password = sys.arg[2]
     dbName = sys.arg[3]
-
-    db = MySQLdb.connect(host=localhost, user=username, passwd=password,
+    host_name = 'localhost'
+    
+    db = MySQLdb.connect(host=host_name, user=username, passwd=password,
                          db=dbName, port=3306
 
     cur = db.cursor()
