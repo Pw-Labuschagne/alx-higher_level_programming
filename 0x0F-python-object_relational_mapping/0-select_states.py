@@ -13,9 +13,10 @@ def ListStates():
     password = sys.arg[2]
     dbName = sys.arg[3]
     host_name = 'localhost'
+    port_id = 3306
     
     db = MySQLdb.connect(host=host_name, user=username, passwd=password,
-                         db=dbName, port=3306
+                         db=dbName, port=port_id)
 
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY ID ASC;")
